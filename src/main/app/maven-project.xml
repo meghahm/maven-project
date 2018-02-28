@@ -38,7 +38,7 @@ http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/m
 		</db:select>
 		<json:object-to-json-transformer
 			doc:name="Object to JSON" />
-        <set-property propertyName="#['Content-Type']" value="#['application/json']" doc:name="Property"/>
+        <set-property doc:name="Property" propertyName="#['Content-Type']" value="#['application/json']"/>
 		<jms:outbound-endpoint queue="flights"
 			connector-ref="Active_MQ" doc:name="JMS" />
 	</flow>
